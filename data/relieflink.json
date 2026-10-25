@@ -1,0 +1,731 @@
+{
+  "users": [
+    {
+      "id": "usr-admin-01",
+      "name": "Elena Vance",
+      "email": "admin@relieflink.org",
+      "phone": "+1-555-0100",
+      "password_hash": "$2a$10$w09Z9mGqVwYc6n.3YqQ1zOFgEceB88v4oO7x8N1n.9V/PqKjG1o8q",
+      "role": "admin",
+      "created_at": "2026-09-25T14:16:40.531Z"
+    },
+    {
+      "id": "usr-vol-01",
+      "name": "Marcus Bennett",
+      "email": "marcus.driver@relieflink.org",
+      "phone": "+1-555-0201",
+      "password_hash": "$2a$10$w09Z9mGqVwYc6n.3YqQ1zOFgEceB88v4oO7x8N1n.9V/PqKjG1o8q",
+      "role": "volunteer",
+      "created_at": "2026-09-30T14:16:40.532Z"
+    },
+    {
+      "id": "usr-vol-02",
+      "name": "Aisha Patel",
+      "email": "aisha.driver@relieflink.org",
+      "phone": "+1-555-0202",
+      "password_hash": "$2a$10$w09Z9mGqVwYc6n.3YqQ1zOFgEceB88v4oO7x8N1n.9V/PqKjG1o8q",
+      "role": "volunteer",
+      "created_at": "2026-10-05T14:16:40.532Z"
+    },
+    {
+      "id": "usr-vol-03",
+      "name": "Carlos Mendez",
+      "email": "carlos.driver@relieflink.org",
+      "phone": "+1-555-0203",
+      "password_hash": "$2a$10$w09Z9mGqVwYc6n.3YqQ1zOFgEceB88v4oO7x8N1n.9V/PqKjG1o8q",
+      "role": "volunteer",
+      "created_at": "2026-10-10T14:16:40.532Z"
+    },
+    {
+      "id": "usr-req-01",
+      "name": "Sarah Jenkins",
+      "email": "sarah.jenkins@example.com",
+      "phone": "+1-555-0301",
+      "password_hash": "$2a$10$w09Z9mGqVwYc6n.3YqQ1zOFgEceB88v4oO7x8N1n.9V/PqKjG1o8q",
+      "role": "requester",
+      "created_at": "2026-10-15T14:16:40.532Z"
+    },
+    {
+      "id": "usr-req-02",
+      "name": "David Kim",
+      "email": "david.kim@example.com",
+      "phone": "+1-555-0302",
+      "password_hash": "$2a$10$w09Z9mGqVwYc6n.3YqQ1zOFgEceB88v4oO7x8N1n.9V/PqKjG1o8q",
+      "role": "requester",
+      "created_at": "2026-10-17T14:16:40.532Z"
+    },
+    {
+      "id": "usr-req-03",
+      "name": "Priya Sharma",
+      "email": "priya.sharma@example.com",
+      "phone": "+1-555-0303",
+      "password_hash": "$2a$10$w09Z9mGqVwYc6n.3YqQ1zOFgEceB88v4oO7x8N1n.9V/PqKjG1o8q",
+      "role": "requester",
+      "created_at": "2026-10-20T14:16:40.532Z"
+    }
+  ],
+  "volunteers": [
+    {
+      "id": "vol-01",
+      "user_id": "usr-vol-01",
+      "name": "Marcus Bennett",
+      "email": "marcus.driver@relieflink.org",
+      "phone": "+1-555-0201",
+      "area": "North Sector",
+      "vehicle": "Van",
+      "is_available": true,
+      "total_deliveries": 18,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    },
+    {
+      "id": "vol-02",
+      "user_id": "usr-vol-02",
+      "name": "Aisha Patel",
+      "email": "aisha.driver@relieflink.org",
+      "phone": "+1-555-0202",
+      "area": "River Valley",
+      "vehicle": "Pickup",
+      "is_available": true,
+      "total_deliveries": 14,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    },
+    {
+      "id": "vol-03",
+      "user_id": "usr-vol-03",
+      "name": "Carlos Mendez",
+      "email": "carlos.driver@relieflink.org",
+      "phone": "+1-555-0203",
+      "area": "Coastal Belt",
+      "vehicle": "Motorcycle",
+      "is_available": true,
+      "total_deliveries": 9,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    }
+  ],
+  "stock": [
+    {
+      "id": "stk-01",
+      "item_name": "Food packets",
+      "category": "Food",
+      "quantity_available": 650,
+      "quantity_reserved": 45,
+      "unit": "boxes",
+      "min_threshold": 100,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    },
+    {
+      "id": "stk-02",
+      "item_name": "Drinking water",
+      "category": "Water",
+      "quantity_available": 820,
+      "quantity_reserved": 60,
+      "unit": "packs (24L)",
+      "min_threshold": 150,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    },
+    {
+      "id": "stk-03",
+      "item_name": "Medicine kits",
+      "category": "Medical",
+      "quantity_available": 140,
+      "quantity_reserved": 20,
+      "unit": "trauma kits",
+      "min_threshold": 40,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    },
+    {
+      "id": "stk-04",
+      "item_name": "Blankets",
+      "category": "Shelter",
+      "quantity_available": 410,
+      "quantity_reserved": 35,
+      "unit": "warm blankets",
+      "min_threshold": 80,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    },
+    {
+      "id": "stk-05",
+      "item_name": "Tents",
+      "category": "Shelter",
+      "quantity_available": 85,
+      "quantity_reserved": 12,
+      "unit": "family tents",
+      "min_threshold": 25,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    },
+    {
+      "id": "stk-06",
+      "item_name": "Clothes",
+      "category": "Apparel",
+      "quantity_available": 320,
+      "quantity_reserved": 25,
+      "unit": "bundles",
+      "min_threshold": 60,
+      "updated_at": "2026-10-25T14:16:40.532Z"
+    }
+  ],
+  "requests": [
+    {
+      "id": "RL-0001",
+      "user_id": "usr-req-01",
+      "requester_name": "Sarah Jenkins",
+      "phone": "+1-555-0301",
+      "area": "River Valley",
+      "address": "442 Riverside Ave, Sector 4",
+      "people_affected": 28,
+      "situation_type": "Flood",
+      "special_groups": [
+        "Children",
+        "Elderly",
+        "Disabled"
+      ],
+      "description": "Rapid flash flood entered lower ground floors. Urgent need for clean drinking water and pediatric kits.",
+      "priority_score": 94.5,
+      "priority_label": "Critical",
+      "status": "Submitted",
+      "created_at": "2026-10-25T11:16:40.532Z",
+      "updated_at": "2026-10-25T11:16:40.532Z"
+    },
+    {
+      "id": "RL-0002",
+      "user_id": "usr-req-02",
+      "requester_name": "David Kim",
+      "phone": "+1-555-0302",
+      "area": "North Sector",
+      "address": "128 Highland Loop, Block B",
+      "people_affected": 42,
+      "situation_type": "Earthquake",
+      "special_groups": [
+        "Children",
+        "Elderly",
+        "Pregnant"
+      ],
+      "description": "Structural damage to community hall serving displaced families. Requires blankets, water, and rations.",
+      "priority_score": 91.2,
+      "priority_label": "Critical",
+      "status": "Submitted",
+      "created_at": "2026-10-25T09:16:40.532Z",
+      "updated_at": "2026-10-25T09:16:40.532Z"
+    },
+    {
+      "id": "RL-0003",
+      "user_id": "usr-req-03",
+      "requester_name": "Priya Sharma",
+      "phone": "+1-555-0303",
+      "area": "Coastal Belt",
+      "address": "89 Lighthouse Point, Jetty 3",
+      "people_affected": 15,
+      "situation_type": "Flood",
+      "special_groups": [
+        "Elderly"
+      ],
+      "description": "Waterlogged access road. Elderly nursing care group cut off from fresh food delivery.",
+      "priority_score": 76.8,
+      "priority_label": "Critical",
+      "status": "Approved",
+      "created_at": "2026-10-25T07:16:40.532Z",
+      "updated_at": "2026-10-25T12:16:40.532Z"
+    },
+    {
+      "id": "RL-0004",
+      "user_id": "usr-req-01",
+      "requester_name": "Sarah Jenkins",
+      "phone": "+1-555-0301",
+      "area": "East Metro",
+      "address": "710 Industrial Way, Warehouse 9",
+      "people_affected": 19,
+      "situation_type": "Fire",
+      "special_groups": [
+        "Children"
+      ],
+      "description": "Evacuees from warehouse fire sheltered in gymnasium. Clothes and food rations needed.",
+      "priority_score": 68.4,
+      "priority_label": "High",
+      "status": "Submitted",
+      "created_at": "2026-10-25T10:16:40.532Z",
+      "updated_at": "2026-10-25T10:16:40.532Z"
+    },
+    {
+      "id": "RL-0005",
+      "user_id": "usr-req-02",
+      "requester_name": "David Kim",
+      "phone": "+1-555-0302",
+      "area": "River Valley",
+      "address": "302 Elmwood Drive",
+      "people_affected": 35,
+      "situation_type": "Flood",
+      "special_groups": [
+        "Children",
+        "Elderly"
+      ],
+      "description": "Flood water subsiding but municipal water grid remains contaminated. Need water packs and food.",
+      "priority_score": 72.1,
+      "priority_label": "High",
+      "status": "Driver Assigned",
+      "created_at": "2026-10-25T06:16:40.532Z",
+      "updated_at": "2026-10-25T13:16:40.532Z"
+    },
+    {
+      "id": "RL-0006",
+      "user_id": "usr-req-03",
+      "requester_name": "Priya Sharma",
+      "phone": "+1-555-0303",
+      "area": "North Sector",
+      "address": "55 Pine Hill Road",
+      "people_affected": 8,
+      "situation_type": "Medical",
+      "special_groups": [
+        "Elderly",
+        "Disabled"
+      ],
+      "description": "Diabetic and chronic condition care patients isolated due to debris blockage.",
+      "priority_score": 64.3,
+      "priority_label": "High",
+      "status": "Submitted",
+      "created_at": "2026-10-25T12:16:40.532Z",
+      "updated_at": "2026-10-25T12:16:40.532Z"
+    },
+    {
+      "id": "RL-0007",
+      "user_id": "usr-req-01",
+      "requester_name": "Sarah Jenkins",
+      "phone": "+1-555-0301",
+      "area": "Highland Ridge",
+      "address": "904 Timberline Pass",
+      "people_affected": 12,
+      "situation_type": "Other",
+      "special_groups": [
+        "Children"
+      ],
+      "description": "Power grid failure following severe storm. Non-perishable food and blankets needed.",
+      "priority_score": 48.5,
+      "priority_label": "Medium",
+      "status": "Submitted",
+      "created_at": "2026-10-25T08:16:40.532Z",
+      "updated_at": "2026-10-25T08:16:40.532Z"
+    },
+    {
+      "id": "RL-0008",
+      "user_id": "usr-req-02",
+      "requester_name": "David Kim",
+      "phone": "+1-555-0302",
+      "area": "East Metro",
+      "address": "215 Commerce Blvd, Suite 10",
+      "people_affected": 14,
+      "situation_type": "Fire",
+      "special_groups": [],
+      "description": "Displaced families awaiting structural inspection. Dry food packets required.",
+      "priority_score": 42,
+      "priority_label": "Medium",
+      "status": "Approved",
+      "created_at": "2026-10-25T05:16:40.532Z",
+      "updated_at": "2026-10-25T11:16:40.532Z"
+    },
+    {
+      "id": "RL-0009",
+      "user_id": "usr-req-03",
+      "requester_name": "Priya Sharma",
+      "phone": "+1-555-0303",
+      "area": "Coastal Belt",
+      "address": "14 Marina Pier Road",
+      "people_affected": 22,
+      "situation_type": "Flood",
+      "special_groups": [
+        "Elderly"
+      ],
+      "description": "Staging hub serving shoreline fishing village. Blankets and dry rations requested.",
+      "priority_score": 58.7,
+      "priority_label": "High",
+      "status": "On the way",
+      "created_at": "2026-10-25T02:16:40.532Z",
+      "updated_at": "2026-10-25T13:46:40.532Z"
+    },
+    {
+      "id": "RL-0010",
+      "user_id": "usr-req-01",
+      "requester_name": "Sarah Jenkins",
+      "phone": "+1-555-0301",
+      "area": "Industrial Zone",
+      "address": "88 Foundry Lane",
+      "people_affected": 6,
+      "situation_type": "Other",
+      "special_groups": [],
+      "description": "Workforce temporary bivouac during transit stoppage. Water and meal rations.",
+      "priority_score": 28.4,
+      "priority_label": "Low",
+      "status": "Submitted",
+      "created_at": "2026-10-25T04:16:40.532Z",
+      "updated_at": "2026-10-25T04:16:40.532Z"
+    },
+    {
+      "id": "RL-0011",
+      "user_id": "usr-req-02",
+      "requester_name": "David Kim",
+      "phone": "+1-555-0302",
+      "area": "North Sector",
+      "address": "614 Summit Crest",
+      "people_affected": 10,
+      "situation_type": "Flood",
+      "special_groups": [],
+      "description": "Basement inundation cleared; requested replenishment of basic emergency kits.",
+      "priority_score": 33.1,
+      "priority_label": "Low",
+      "status": "Delivered",
+      "created_at": "2026-10-24T14:16:40.532Z",
+      "updated_at": "2026-10-25T08:16:40.532Z"
+    },
+    {
+      "id": "RL-0012",
+      "user_id": "usr-req-03",
+      "requester_name": "Priya Sharma",
+      "phone": "+1-555-0303",
+      "area": "River Valley",
+      "address": "17 Riverbank Crescent",
+      "people_affected": 25,
+      "situation_type": "Flood",
+      "special_groups": [
+        "Children"
+      ],
+      "description": "Delivered safe drinking water and meal rations to community kitchen.",
+      "priority_score": 62,
+      "priority_label": "High",
+      "status": "Delivered",
+      "created_at": "2026-10-24T08:16:40.532Z",
+      "updated_at": "2026-10-25T00:16:40.532Z"
+    }
+  ],
+  "request_items": [
+    {
+      "id": "ri-01-1",
+      "request_id": "RL-0001",
+      "item_name": "Drinking water",
+      "quantity": 30
+    },
+    {
+      "id": "ri-01-2",
+      "request_id": "RL-0001",
+      "item_name": "Medicine kits",
+      "quantity": 8
+    },
+    {
+      "id": "ri-01-3",
+      "request_id": "RL-0001",
+      "item_name": "Food packets",
+      "quantity": 25
+    },
+    {
+      "id": "ri-02-1",
+      "request_id": "RL-0002",
+      "item_name": "Food packets",
+      "quantity": 40
+    },
+    {
+      "id": "ri-02-2",
+      "request_id": "RL-0002",
+      "item_name": "Drinking water",
+      "quantity": 45
+    },
+    {
+      "id": "ri-02-3",
+      "request_id": "RL-0002",
+      "item_name": "Blankets",
+      "quantity": 30
+    },
+    {
+      "id": "ri-02-4",
+      "request_id": "RL-0002",
+      "item_name": "Tents",
+      "quantity": 4
+    },
+    {
+      "id": "ri-03-1",
+      "request_id": "RL-0003",
+      "item_name": "Food packets",
+      "quantity": 15
+    },
+    {
+      "id": "ri-03-2",
+      "request_id": "RL-0003",
+      "item_name": "Drinking water",
+      "quantity": 20
+    },
+    {
+      "id": "ri-03-3",
+      "request_id": "RL-0003",
+      "item_name": "Medicine kits",
+      "quantity": 5
+    },
+    {
+      "id": "ri-04-1",
+      "request_id": "RL-0004",
+      "item_name": "Clothes",
+      "quantity": 20
+    },
+    {
+      "id": "ri-04-2",
+      "request_id": "RL-0004",
+      "item_name": "Food packets",
+      "quantity": 20
+    },
+    {
+      "id": "ri-04-3",
+      "request_id": "RL-0004",
+      "item_name": "Blankets",
+      "quantity": 15
+    },
+    {
+      "id": "ri-05-1",
+      "request_id": "RL-0005",
+      "item_name": "Drinking water",
+      "quantity": 35
+    },
+    {
+      "id": "ri-05-2",
+      "request_id": "RL-0005",
+      "item_name": "Food packets",
+      "quantity": 30
+    },
+    {
+      "id": "ri-06-1",
+      "request_id": "RL-0006",
+      "item_name": "Medicine kits",
+      "quantity": 8
+    },
+    {
+      "id": "ri-06-2",
+      "request_id": "RL-0006",
+      "item_name": "Drinking water",
+      "quantity": 10
+    },
+    {
+      "id": "ri-07-1",
+      "request_id": "RL-0007",
+      "item_name": "Food packets",
+      "quantity": 12
+    },
+    {
+      "id": "ri-07-2",
+      "request_id": "RL-0007",
+      "item_name": "Blankets",
+      "quantity": 12
+    },
+    {
+      "id": "ri-08-1",
+      "request_id": "RL-0008",
+      "item_name": "Food packets",
+      "quantity": 15
+    },
+    {
+      "id": "ri-08-2",
+      "request_id": "RL-0008",
+      "item_name": "Drinking water",
+      "quantity": 15
+    },
+    {
+      "id": "ri-09-1",
+      "request_id": "RL-0009",
+      "item_name": "Blankets",
+      "quantity": 20
+    },
+    {
+      "id": "ri-09-2",
+      "request_id": "RL-0009",
+      "item_name": "Drinking water",
+      "quantity": 25
+    },
+    {
+      "id": "ri-10-1",
+      "request_id": "RL-0010",
+      "item_name": "Drinking water",
+      "quantity": 10
+    },
+    {
+      "id": "ri-10-2",
+      "request_id": "RL-0010",
+      "item_name": "Food packets",
+      "quantity": 8
+    },
+    {
+      "id": "ri-11-1",
+      "request_id": "RL-0011",
+      "item_name": "Medicine kits",
+      "quantity": 5
+    },
+    {
+      "id": "ri-11-2",
+      "request_id": "RL-0011",
+      "item_name": "Drinking water",
+      "quantity": 12
+    },
+    {
+      "id": "ri-12-1",
+      "request_id": "RL-0012",
+      "item_name": "Food packets",
+      "quantity": 25
+    },
+    {
+      "id": "ri-12-2",
+      "request_id": "RL-0012",
+      "item_name": "Drinking water",
+      "quantity": 25
+    }
+  ],
+  "assignments": [
+    {
+      "id": "asg-01",
+      "request_id": "RL-0005",
+      "volunteer_id": "vol-02",
+      "volunteer_name": "Aisha Patel",
+      "volunteer_phone": "+1-555-0202",
+      "volunteer_vehicle": "Pickup",
+      "status": "Assigned",
+      "notes": "Urgent dispatch for flood relief shelter in River Valley.",
+      "allocated_at": "2026-10-25T13:16:40.532Z",
+      "delivered_at": null
+    },
+    {
+      "id": "asg-02",
+      "request_id": "RL-0009",
+      "volunteer_id": "vol-03",
+      "volunteer_name": "Carlos Mendez",
+      "volunteer_phone": "+1-555-0203",
+      "volunteer_vehicle": "Motorcycle",
+      "status": "On the Way",
+      "notes": "Navigating coastal feeder road with motorcycle supply crates.",
+      "allocated_at": "2026-10-25T11:16:40.532Z",
+      "delivered_at": null
+    },
+    {
+      "id": "asg-03",
+      "request_id": "RL-0011",
+      "volunteer_id": "vol-01",
+      "volunteer_name": "Marcus Bennett",
+      "volunteer_phone": "+1-555-0201",
+      "volunteer_vehicle": "Van",
+      "status": "Delivered",
+      "notes": "Delivered to resident liaison on site. Recipient signed confirmation.",
+      "allocated_at": "2026-10-24T18:16:40.532Z",
+      "delivered_at": "2026-10-25T08:16:40.532Z"
+    },
+    {
+      "id": "asg-04",
+      "request_id": "RL-0012",
+      "volunteer_id": "vol-02",
+      "volunteer_name": "Aisha Patel",
+      "volunteer_phone": "+1-555-0202",
+      "volunteer_vehicle": "Pickup",
+      "status": "Delivered",
+      "notes": "Received safely by community kitchen supervisor.",
+      "allocated_at": "2026-10-24T10:16:40.532Z",
+      "delivered_at": "2026-10-25T00:16:40.532Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-01",
+      "user_id": "usr-vol-02",
+      "title": "New Delivery Dispatched",
+      "message": "You have been assigned request RL-0005 at 302 Elmwood Drive, River Valley.",
+      "type": "assignment",
+      "is_read": false,
+      "created_at": "2026-10-25T13:16:40.532Z"
+    },
+    {
+      "id": "notif-02",
+      "user_id": "usr-vol-03",
+      "title": "Dispatch In Progress",
+      "message": "Request RL-0009 accepted. Safe transit to 14 Marina Pier Road, Coastal Belt.",
+      "type": "assignment",
+      "is_read": true,
+      "created_at": "2026-10-25T11:16:40.532Z"
+    },
+    {
+      "id": "notif-03",
+      "user_id": "usr-req-02",
+      "title": "Driver En Route",
+      "message": "A volunteer driver has been assigned to your request RL-0005.",
+      "type": "status_change",
+      "is_read": false,
+      "created_at": "2026-10-25T13:16:40.532Z"
+    },
+    {
+      "id": "notif-04",
+      "user_id": "usr-admin-01",
+      "title": "High Priority Request Logged",
+      "message": "Critical flood relief request RL-0001 submitted from River Valley.",
+      "type": "alert",
+      "is_read": false,
+      "created_at": "2026-10-25T11:16:40.532Z"
+    }
+  ],
+  "activity_log": [
+    {
+      "id": "act-01",
+      "user_id": "usr-admin-01",
+      "user_name": "Elena Vance",
+      "action_type": "ALLOCATE_REQUEST",
+      "details": {
+        "requestId": "RL-0005",
+        "driver": "Aisha Patel",
+        "area": "River Valley",
+        "items": [
+          {
+            "name": "Drinking water",
+            "qty": 35
+          },
+          {
+            "name": "Food packets",
+            "qty": 30
+          }
+        ]
+      },
+      "created_at": "2026-10-25T13:16:40.532Z"
+    },
+    {
+      "id": "act-02",
+      "user_id": "usr-vol-03",
+      "user_name": "Carlos Mendez",
+      "action_type": "STATUS_UPDATE",
+      "details": {
+        "requestId": "RL-0009",
+        "previousStatus": "Driver Assigned",
+        "newStatus": "On the way"
+      },
+      "created_at": "2026-10-25T13:46:40.532Z"
+    },
+    {
+      "id": "act-03",
+      "user_id": "usr-vol-01",
+      "user_name": "Marcus Bennett",
+      "action_type": "DELIVERY_COMPLETED",
+      "details": {
+        "requestId": "RL-0011",
+        "notes": "Delivered to resident liaison on site."
+      },
+      "created_at": "2026-10-25T08:16:40.532Z"
+    },
+    {
+      "id": "act-04",
+      "user_id": "usr-vol-02",
+      "user_name": "Aisha Patel",
+      "action_type": "DELIVERY_COMPLETED",
+      "details": {
+        "requestId": "RL-0012",
+        "notes": "Received safely by community kitchen supervisor."
+      },
+      "created_at": "2026-10-25T00:16:40.532Z"
+    },
+    {
+      "id": "act-05",
+      "user_id": "usr-admin-01",
+      "user_name": "Elena Vance",
+      "action_type": "STOCK_UPDATE",
+      "details": {
+        "item": "Drinking water",
+        "delta": 200,
+        "newTotal": 820
+      },
+      "created_at": "2026-10-24T20:16:40.532Z"
+    }
+  ]
+}
